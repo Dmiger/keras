@@ -5,9 +5,11 @@ Created on Fri Jul 28 17:06:02 2017
 @author: Sony VAIO Pro
 """
 
-from keras.models import Sequential
-from keras.layers import MaxPooling2D
-
-model = Sequential()
-model.add(MaxPooling2D(pool_size=2, strides=3, input_shape=(100, 100, 15)))
-model.summary() 
+class Element(object):
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+        
+class LinkedList(object):
+    def __init__(self, head=None):
+        self.head = head
